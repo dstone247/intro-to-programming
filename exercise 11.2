@@ -1,0 +1,11 @@
+import re 
+
+hand = open(filename, 'r')
+
+numlist = []
+
+for line in hand:
+    match = re.search("New\sRevision:\s(\d+)", line)
+    if match:
+        numlist.append(int(match.group(1)))
+print(sum(numlist)/lens(numlist))
