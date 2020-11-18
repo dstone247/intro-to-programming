@@ -1,0 +1,8 @@
+import re 
+
+filename = input("Enter the filename: ")
+regex = input("Enter a regular expression: ")
+
+hand = open(filename, 'r')
+for line in hand:
+    print(re.search(regex, line))
